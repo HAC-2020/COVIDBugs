@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LocationUI">
+   <children>
+      <Label layoutX="31.0" layoutY="120.0" text="Login">
+         <font>
+            <Font name="Century Gothic Bold" size="33.0" />
+         </font>
+      </Label>
+      <TextField cache="true" layoutX="39.0" layoutY="205.0" prefHeight="42.0" prefWidth="282.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3; -fx-background-color: #E5E5E5;" styleClass="name" stylesheets="@stylesheet.css" text="Email Adress">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextField>
+      <Button layoutX="39.0" layoutY="417.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="282.0" style="-fx-background-color: FFBD12; -fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3;" text="Sign In">
+         <font>
+            <Font name="Century Gothic Bold" size="25.0" />
+         </font></Button>
+      <PasswordField layoutX="39.0" layoutY="277.0" prefHeight="42.0" prefWidth="282.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3; -fx-background-color: #E5E5E5;" text="Password">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="29.0" layoutY="54.0" mnemonicParsing="false" onAction="#exitButton" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fx:id="X_Image" fitHeight="49.0" fitWidth="49.0" onMousePressed="#exitButton" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="file:/C:/Users/miled/Documents/Mile/Hackathon/VENDOR%20APP/button/medium/outline%20-%20icon-only.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D minX="50.0" minY="50.0" width="50.0" />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </Button>
+      
+   </children>
+</AnchorPane>
