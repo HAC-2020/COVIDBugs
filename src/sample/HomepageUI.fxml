@@ -6,13 +6,13 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomepageUI">
+<AnchorPane prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomepageUI">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd41f" height="142.0" layoutX="34.0" layoutY="215.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="132.0" />
-      <TextField layoutX="16.0" layoutY="96.0" prefHeight="47.0" prefWidth="328.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3; -fx-background-color: #E5E5E5;" text=" Search with love...">
+      <TextField fx:id="search_Text" layoutX="16.0" layoutY="96.0" onAction="#searchingShop" onInputMethodTextChanged="#searchingShop" prefHeight="47.0" prefWidth="328.0" promptText=" Search with love..." style="-fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3; -fx-background-color: white;">
          <font>
             <Font name="Century Gothic Bold" size="22.0" />
          </font></TextField>
@@ -22,24 +22,9 @@
             <Image url="@../images/bell.png" />
          </image>
       </ImageView>
-      <Label alignment="TOP_LEFT" layoutX="187.0" layoutY="215.0" prefHeight="142.0" prefWidth="132.0" text="Ashoka Grocery Shop" wrapText="true">
+      <Label fx:id="secondShopName" alignment="TOP_LEFT" layoutX="187.0" layoutY="401.0" prefHeight="142.0" prefWidth="132.0" text="EasiPick - Fresh Fruits &amp; Veggies" wrapText="true">
          <font>
             <Font name="Century Gothic Bold" size="23.0" />
-         </font>
-      </Label>
-      <Label alignment="TOP_LEFT" layoutX="187.0" layoutY="401.0" prefHeight="142.0" prefWidth="132.0" text="EasiPick - Fresh Fruits &amp; Veggies" wrapText="true">
-         <font>
-            <Font name="Century Gothic Bold" size="23.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="187.0" layoutY="329.0">
-         <image>
-            <Image url="@../images/message-square.png" />
-         </image>
-      </ImageView>
-      <Label alignment="TOP_LEFT" layoutX="215.0" layoutY="332.0" prefHeight="26.0" prefWidth="132.0" text="5km" wrapText="true">
-         <font>
-            <Font name="Century Gothic Bold" size="15.0" />
          </font>
       </Label>
       <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="187.0" layoutY="514.0">
@@ -47,24 +32,60 @@
             <Image url="@../images/message-square.png" />
          </image>
       </ImageView>
-      <Label alignment="TOP_LEFT" layoutX="215.0" layoutY="517.0" prefHeight="26.0" prefWidth="54.0" text="12km " wrapText="true">
+      <Label fx:id="secondShop_Distance" alignment="TOP_LEFT" layoutX="215.0" layoutY="517.0" prefHeight="26.0" prefWidth="54.0" text="12km " wrapText="true">
          <font>
             <Font name="Century Gothic Bold" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="21.0" layoutY="45.0">
+      <Button layoutX="21.0" layoutY="45.0" mnemonicParsing="false" onAction="#goTo_Settings" opacity="0.0" prefHeight="25.0" prefWidth="26.0" />
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="21.0" layoutY="44.0">
          <image>
             <Image url="@../images/menu.png" />
          </image>
       </ImageView>
-      <Label alignment="TOP_LEFT" layoutX="109.0" layoutY="38.0" prefHeight="142.0" prefWidth="164.0" text="BuyMeThings" textAlignment="CENTER" wrapText="true">
+      <Label alignment="TOP_LEFT" layoutX="122.0" layoutY="19.0" prefHeight="142.0" prefWidth="117.0" text="fassom" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Century Gothic Bold" size="23.0" />
+            <Font name="Century Gothic Bold" size="34.0" />
          </font>
       </Label>
-      <Button layoutX="39.0" layoutY="565.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: FFBD12; -fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3;" text="Add store">
+      <Button layoutX="39.0" layoutY="565.0" mnemonicParsing="false" onAction="#goTo_AddStore" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: FFBD12; -fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3;" text="Add store">
          <font>
             <Font name="Century Gothic Bold" size="23.0" />
          </font></Button>
+      <ImageView fitHeight="100.0" fitWidth="70.0" layoutX="66.0" layoutY="422.0">
+         <image>
+            <Image url="@../images/market-5043886_640.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="304.0" layoutY="108.0">
+         <image>
+            <Image url="@../images/search.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="paneStore_One" layoutX="21.0" layoutY="186.0" prefHeight="200.0" prefWidth="328.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd41f" height="142.0" layoutX="14.0" layoutY="29.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="132.0" />
+            <Label fx:id="firstShopName" alignment="TOP_LEFT" layoutX="168.0" layoutY="29.0" onMouseClicked="#changeShopName" prefHeight="142.0" prefWidth="132.0" text="Ashoka Grocery Shop" wrapText="true">
+               <font>
+                  <Font name="Century Gothic Bold" size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="168.0" layoutY="137.0">
+               <image>
+                  <Image url="@../images/message-square.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="firstShop_Distance" alignment="TOP_LEFT" layoutX="202.0" layoutY="137.0" prefHeight="26.0" prefWidth="132.0" text="5km" wrapText="true">
+               <font>
+                  <Font name="Century Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="102.0" layoutX="29.0" layoutY="50.0">
+               <image>
+                  <Image url="@../images/market-5043874_1280.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,10 +14,11 @@ public class Main extends Application {
 
     double xOffset, yOffset;
 
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("locationUI.fxml"));
-        primaryStage.setTitle("Hello World");
+        Parent root = FXMLLoader.load(getClass().getResource("LoginUI.fxml"));
+        primaryStage.setTitle("VendorApp");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UNDECORATED);
@@ -37,6 +39,8 @@ public class Main extends Application {
                 primaryStage.setY(mouseEvent.getScreenY() - yOffset);
             }
         });
+
+        Platform.runLater(() -> root.requestFocus());
     }
 
 
