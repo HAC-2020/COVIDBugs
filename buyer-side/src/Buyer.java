@@ -32,7 +32,6 @@ public class Buyer {
 	//override linkedlist toString
 	public void viewCart() {
 		System.out.println(cart.toString());
-		//System.out.println(Arrays.toString(cart.toArray()));
 	}
 	
 }
