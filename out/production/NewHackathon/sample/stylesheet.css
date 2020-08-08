@@ -15,3 +15,10 @@
     -fx-background-color: black;
     -fx-background-radius: 30 0 0 30
 }
+
+
+.like:hover{
+    -fx-background-color: black;
+
+}
+

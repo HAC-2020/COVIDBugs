@@ -25,7 +25,7 @@
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></TextField>
-      <Button layoutX="39.0" layoutY="417.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="282.0" style="-fx-background-color: FFBD12; -fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3;" text="Sign In">
+      <Button layoutX="39.0" layoutY="417.0" mnemonicParsing="false" onAction="#goToMainScreen" prefHeight="56.0" prefWidth="282.0" style="-fx-background-color: FFBD12; -fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3;" text="Sign In">
          <font>
             <Font name="Century Gothic Bold" size="25.0" />
          </font></Button>
@@ -34,11 +34,11 @@
             <Font name="Century Gothic Bold" size="15.0" />
          </font>
       </PasswordField>
-      <Button layoutX="29.0" layoutY="54.0" mnemonicParsing="false" onAction="#exitButton" style="-fx-background-color: transparent;">
+      <Button layoutX="21.0" layoutY="26.0" mnemonicParsing="false" onAction="#exitButton" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fx:id="X_Image" fitHeight="49.0" fitWidth="49.0" onMousePressed="#exitButton" pickOnBounds="true" preserveRatio="true" smooth="false">
                <image>
-                  <Image url="file:/C:/Users/miled/Documents/Mile/Hackathon/VENDOR%20APP/button/medium/outline%20-%20icon-only.png" />
+                  <Image url="@../images/exitButton.png" />
                </image>
                <viewport>
                   <Rectangle2D minX="50.0" minY="50.0" width="50.0" />
