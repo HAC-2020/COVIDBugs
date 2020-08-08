@@ -101,6 +101,40 @@ public class HomepageUI {
         }
     }
 
+    @FXML
+    void goTo_FirstShop(MouseEvent event) throws IOException {
+        System.out.println("DAD");
+        Parent homepageRoot = FXMLLoader.load(getClass().getResource("firstShopUI.fxml"));
+        Scene homepageScene = new Scene(homepageRoot);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(homepageScene);
+        window.show();
+        Platform.runLater(() -> homepageRoot.requestFocus());
+    }
+
+    @FXML
+    void goTo_Profile(ActionEvent event) {
+
+    }
+
+    @FXML
+    void goTo_Saved(ActionEvent event) {
+
+    }
+
+    @FXML
+    void goTo_Cart(ActionEvent event) {
+
+    }
+
+    @FXML
+    void goTo_Home(ActionEvent event) {
+
+    }
+
+
+
 }
 
 

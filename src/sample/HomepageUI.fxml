@@ -12,6 +12,19 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomepageUI">
    <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="360.0" layoutY="562.0">
+               <image>
+                  <Image url="@../images/tabbar.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="15.0" layoutY="571.0" mnemonicParsing="false" onAction="#goTo_Home" prefHeight="56.0" prefWidth="54.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="107.0" layoutY="571.0" mnemonicParsing="false" onAction="#goTo_Cart" prefHeight="56.0" prefWidth="54.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="201.0" layoutY="570.0" mnemonicParsing="false" onAction="#goTo_Saved" prefHeight="56.0" prefWidth="54.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="292.0" layoutY="570.0" mnemonicParsing="false" onAction="#goTo_Profile" prefHeight="56.0" prefWidth="54.0" style="-fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
       <TextField fx:id="search_Text" layoutX="16.0" layoutY="96.0" onAction="#searchingShop" onInputMethodTextChanged="#searchingShop" prefHeight="47.0" prefWidth="328.0" promptText=" Search with love..." style="-fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3; -fx-background-color: white;">
          <font>
             <Font name="Century Gothic Bold" size="22.0" />
@@ -43,15 +56,11 @@
             <Image url="@../images/menu.png" />
          </image>
       </ImageView>
-      <Label alignment="TOP_LEFT" layoutX="122.0" layoutY="19.0" prefHeight="142.0" prefWidth="117.0" text="fassom" textAlignment="CENTER" wrapText="true">
+      <Label alignment="TOP_LEFT" layoutX="126.0" layoutY="33.0" prefHeight="142.0" prefWidth="109.0" text="fasson" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Century Gothic Bold" size="34.0" />
          </font>
       </Label>
-      <Button layoutX="39.0" layoutY="565.0" mnemonicParsing="false" onAction="#goTo_AddStore" prefHeight="50.0" prefWidth="282.0" style="-fx-background-color: FFBD12; -fx-border-color: black; -fx-border-radius: 15; -fx-border-width: 3;" text="Add store">
-         <font>
-            <Font name="Century Gothic Bold" size="23.0" />
-         </font></Button>
       <ImageView fitHeight="100.0" fitWidth="70.0" layoutX="66.0" layoutY="422.0">
          <image>
             <Image url="@../images/market-5043886_640.png" />
@@ -62,10 +71,10 @@
             <Image url="@../images/search.png" />
          </image>
       </ImageView>
-      <Pane fx:id="paneStore_One" layoutX="21.0" layoutY="186.0" prefHeight="200.0" prefWidth="328.0">
+      <Pane fx:id="paneStore_One" layoutX="21.0" layoutY="186.0" onDragDetected="#goTo_FirstShop" onMouseClicked="#goTo_FirstShop" prefHeight="200.0" prefWidth="328.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd41f" height="142.0" layoutX="14.0" layoutY="29.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="132.0" />
-            <Label fx:id="firstShopName" alignment="TOP_LEFT" layoutX="168.0" layoutY="29.0" onMouseClicked="#changeShopName" prefHeight="142.0" prefWidth="132.0" text="Ashoka Grocery Shop" wrapText="true">
+            <Label fx:id="firstShopName" alignment="TOP_LEFT" layoutX="168.0" layoutY="29.0" prefHeight="142.0" prefWidth="132.0" text="Ashoka Grocery Shop" wrapText="true">
                <font>
                   <Font name="Century Gothic Bold" size="23.0" />
                </font>
