@@ -1,0 +1,9 @@
+
+public class Buyer {
+	private String location;
+	private 
+	
+	public Buyer(String city) {
+		location = city;
+	}
+}

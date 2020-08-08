@@ -1,0 +1,16 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class BuyerTest {
+	public static void main(String[] args) {
+		
+		Buyer buyer1 = new Buyer();
+		
+		buyer1.chooseCity("Atlanta");
+		
+		Item mask = new Item(1234, 1, "Mask", 1.99);
+		buyer1.addToCart(mask);
+		buyer1.viewCart();
+		System.out.println("hi");
+	}
+}

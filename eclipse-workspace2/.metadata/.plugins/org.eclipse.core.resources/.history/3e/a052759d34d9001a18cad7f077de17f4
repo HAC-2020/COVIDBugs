@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.LinkedList;
+
+public class Buyer {
+	private String location;
+	private LinkedList<Item> cart;
+	
+	public Buyer() {
+		location = "";
+		cart = new LinkedList<Item>();
+	}
+	
+	public void chooseCity(String city) {
+		location = city;
+	}
+	
+	public void addToCart(Item product) {
+		cart.add(product);
+	}
+	
+	public void removeFromCart(Item product) {
+		cart.remove(product);
+	}
+	
+	//override linkedlist toString
+	public void viewCart() {
+		
+	}
+	
+}

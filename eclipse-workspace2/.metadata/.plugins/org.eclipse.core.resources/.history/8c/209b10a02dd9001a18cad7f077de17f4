@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Buyer {
+	private String location;
+	private LinkedList<Item> cart;
+	
+	public Buyer(String city) {
+		location = city;
+		cart = new LinkedList<Item>();
+	}
+	
+	//Item would be your Item class
+	public void addToCart(Item product) {
+		cart.add(product);
+	}
+	
+	
+}

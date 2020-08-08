@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class BuyerTest {
+	public static void main(String[] args) {
+		//input of city by user
+		Scanner input = new Scanner(System.in);
+		String locationCity = input.next();
+		
+		Buyer buyer1 = new Buyer(locationCity);
+		
+		Item mask = new Item(1234, 1, "Mask", 1.99);
+		buyer1.addToCart(mask);
+	}
+}

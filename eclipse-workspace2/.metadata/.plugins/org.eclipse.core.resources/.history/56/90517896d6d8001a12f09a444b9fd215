@@ -1,0 +1,9 @@
+
+public class Buyer {
+	private String location;
+	private LinkedList<String> cart = new LinkedList<String>();
+	
+	public Buyer(String city) {
+		location = city;
+	}
+}

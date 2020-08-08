@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class buyer_test {
+	public static void main(String[] args) {
+		//input of city by user
+		Scanner input = new Scanner(System.in);
+		String locationCity = input.next();
+		
+		Buyer buyer1 = new Buyer(locationCity);
+	}
+}

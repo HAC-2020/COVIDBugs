@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Buyer {
+	private String location;
+	private LinkedList<String> cart;
+	
+	public Buyer(String city) {
+		location = city;
+		cart = new LinkedList<String>();
+	}
+	
+	public void fillCart(String item) {
+		cart.add(item);
+	}
+}

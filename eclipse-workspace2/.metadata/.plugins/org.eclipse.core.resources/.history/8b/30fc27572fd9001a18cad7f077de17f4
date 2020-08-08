@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Buyer {
+	private String location;
+	private LinkedList<Item> cart;
+	
+	public Buyer() {
+		location = "";
+		cart = new LinkedList<Item>();
+	}
+	
+	public void chooseCity(String city) {
+		location = city;
+	}
+	
+	public void addToCart(Item product) {
+		cart.add(product);
+	}
+	
+	public String viewCart() {
+		return cart.toString();
+		//LinkedList<Item>
+		//System.out.println(cart);
+	}
+	
+}
