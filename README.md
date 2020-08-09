@@ -1,6 +1,4 @@
-# COVIDBugs 
-
-VenXdoor
+# VenXdoor by COVIDBugs 
 
 During the pandemic, everyone’s biggest concern is staying inside and staying safe. In these difficult times, local vendors and producers are the only sources to get our essentials from. But we don’t always know all the vendors near our location or what kind of products they sell. This app will bring together all the local vendors and producers on one platform where they can host their businesses along with the availability of the products they sell. The buyer can search for sellers up until a certain area from his current location and then choose the products he needs to buy from different sellers. The order, once placed, will either be delivered to the buyer’s home or picked up from the vendors’ location. 
 
