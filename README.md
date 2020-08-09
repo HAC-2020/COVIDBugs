@@ -24,7 +24,6 @@ Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 <img src="app2.png" align="center" width="300">
 </p>
 
-<p align="right">
-<img src="app3.png" align="center" width="300">
-</p>
+<img src="app3.png" align="center" align="left" width="300">
+
 
