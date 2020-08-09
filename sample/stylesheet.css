@@ -1,0 +1,24 @@
+.anchorpane{
+    -fx-background-color: #666666
+}
+
+.btm-pane{
+    -fx-background-color: #666666
+}
+
+.button{
+    -fx-background-color: white;
+    -fx-background-radius: 100;
+}
+
+.button:hover{
+    -fx-background-color: black;
+    -fx-background-radius: 30 0 0 30
+}
+
+
+.like:hover{
+    -fx-background-color: black;
+
+}
+

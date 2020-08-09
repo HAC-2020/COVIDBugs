@@ -1,7 +1,5 @@
-package Buyer;
 import java.util.*;
 
-import Item.Item;
 public class BuyerTest {
 	public static void main(String[] args) {
 		
@@ -28,6 +26,7 @@ public class BuyerTest {
 		buyer1.viewCart();
 		buyer1.viewSaved();
 
+		
 		
 	}
 }
