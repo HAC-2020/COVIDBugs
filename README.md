@@ -13,9 +13,9 @@ To run what we have made: \\
 
 Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 
-<p align="left">
-<img src="app2.png" width="200">  <img src="app1.png"  width="200">
-<img src="app3.png" width="200">
+<p align="center">
+<img src="app2.png" width="250">  <img src="app1.png"  width="250">
+<img src="app3.png" width="250">
 </p>
 
 
