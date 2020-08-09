@@ -13,5 +13,5 @@ To run what we have made: \\
 
 Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 <p align="center">
-<img src="appscreenshot.png">
+<img src="appscreenshot.png" width="350">
 </p>
