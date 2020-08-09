@@ -13,16 +13,18 @@ To run what we have made: \\
 
 Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 
+
+
+
 <p align="center">
-<img src="app2.png" align="center" width="350">
+<img src="app1.png" align="left" width="300">
 </p>
 
-
-<p align="center">
-<img src="app1.png" align="left" width="350">
+<p align="left">
+<img src="app2.png" align="center" width="300">
 </p>
 
-<p align="center">
-<img src="app3.png" align="center" width="350">
+<p align="right">
+<img src="app3.png" align="center" width="300">
 </p>
 
