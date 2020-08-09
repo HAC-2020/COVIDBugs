@@ -14,6 +14,8 @@ To run what we have made: \\
 Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 
 
+![alt-text-1](app2.png "title-1") ![alt-text-2](app1.png "title-2") ![alt-text-1](app31.png "title-1")
+
 
 
 <p align="center">
@@ -21,9 +23,9 @@ Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 </p>
 
 <p align="left">
-<img src="app2.png" align="center" width="200">
+<img src="app2.png" align="center" width="200"> 
+<img src="app3.png" align="right" width="200">
 </p>
 
-<img src="app3.png" align="right" width="200">
 
 
