@@ -6,7 +6,7 @@ Our app makes it extremely easy for shoppers to get what they need in a short am
 
 As long as people are willing to shop online for their essentials, this app will stay relevant and necessary. The pandemic has caused many to start ordering online, but online shopping has been popular for many years and will continue to be, if not more. 
 
-This app was coded entirely in Java, using JavaFX for frontend. 
+This app was coded entirely in Java, using JavaFX for frontend.
 
 To run what we have made: \\
 ```UIDesign\out\artifacts\launch.vbs```
