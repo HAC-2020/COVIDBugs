@@ -16,12 +16,13 @@ public class Seller {
         sLocation = new HashMap<String,List<Coordinates>>();
     }*/
     /*need to add coordinates*/
+    //needs lon and lat
     public Seller(String n, Item it, String[] pm, String[] delivery) {
         name = n;
         products = new ArrayList<Item>();
         products.add(it);
         payments = pm;
-        deliveryOpts = delivery;
+        deliveryOpts = delivery;//should be string
 
         //sLocation.put(c,loc);
     }
@@ -33,7 +34,9 @@ public class Seller {
         this.sLocation.put(s, cor);
         return this;
     }
-
+    public HashMap<String, List<Coordinates>> getLocation() {
+        return sLocation;
+    }
     /*set vendor name*/
     public void setName(String n) {
         name = n;
@@ -97,7 +100,10 @@ public class Seller {
         }
 
     }
-
+    public Item getItem(int i){
+        int searched = search(i);
+        return products.get(searched);
+    }
     /*
     accepts SKU numbers and search and product list
     */
@@ -158,7 +164,7 @@ public class Seller {
     }
 
     /*class to store seller location*/
-    private class Coordinates{
+    public class Coordinates{
         private double latitude,longitude;
         public Coordinates(double la,double lo){
             latitude=la;
