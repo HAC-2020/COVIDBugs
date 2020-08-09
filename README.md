@@ -14,8 +14,7 @@ To run what we have made: \\
 Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 
 <p align="left">
-<img src="app2.png" align="center" width="200"> 
- <img src="app1.png" align="left" width="200">
+<img src="app2.png" align="center" width="200">  <img src="app1.png" align="left" width="200">
 <img src="app3.png" align="right" width="200">
 </p>
 
