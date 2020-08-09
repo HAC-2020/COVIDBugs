@@ -100,7 +100,10 @@ public class Seller {
         }
 
     }
-
+    public Item getItem(int i){
+        int searched = search(i);
+        return products.get(searched);
+    }
     /*
     accepts SKU numbers and search and product list
     */
@@ -161,7 +164,7 @@ public class Seller {
     }
 
     /*class to store seller location*/
-    private class Coordinates{
+    public class Coordinates{
         private double latitude,longitude;
         public Coordinates(double la,double lo){
             latitude=la;

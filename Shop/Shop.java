@@ -1,6 +1,7 @@
 package Shop;
 import java.util.*;
 import Seller.Seller;
+import Buyer.Buyer;
 import Item.Item;
 import java.util.ArrayList;
 public class Shop {
@@ -25,7 +26,6 @@ public class Shop {
                           String S, double la, double lo){
          Seller seller1 = new Seller(name, productname, pm, delivery);
          seller1.setLocation(S, la, lo);
-         sellerslist.add(seller1);
          return seller1;
     }
 
@@ -50,6 +50,7 @@ public class Shop {
     }
     //finds if seller name is in the list
     public static int getSeller(String name){
+       // if(sellerslist == null) return -1;
         for (int i = 0; i < sellerslist.size(); i++){
             if (name == sellerslist.get(i).getName()){
                 return i;
@@ -80,6 +81,12 @@ public class Shop {
         double longitude = 122.0308;
 
         if (user_input == 1){ //if it a seller
+            if(sellerslist==null){
+                Seller sellerObj = NewSeller(sellerName,produce,payments,
+                        delivery,city,latitude,longitude); //make seller obj with necessary information about seller
+                sellerslist = new ArrayList<Seller>();
+                sellerslist.add(sellerObj); // adds to seller list
+            }
             int position = getSeller(sellerName);
             if (position == -1){
                 Seller sellerObj = NewSeller(sellerName,produce,payments,
@@ -115,7 +122,8 @@ public class Shop {
 
 
         }else{
-
+            Buyer buyer1 = new Buyer();
+            buyer1.chooseCity("Fremont");
             /*Buyer section goes here*/
 
 
@@ -129,7 +137,12 @@ public class Shop {
             double d1 = distance(buyerLat,latitude,buyerLon,longitude);
             double d2 = distance(buyerLat,closerSellerLat,buyerLon,closerSellerLon);
             if(d2<d1) System.out.print("CloserSeller is closer to Buyer.");
-
+            //test
+            Seller sellerObj = NewSeller(sellerName,produce,payments,
+                    delivery,city,latitude,longitude); //make seller obj with necessary information about seller
+            sellerslist = new ArrayList<Seller>();
+            sellerslist.add(sellerObj); // adds to seller list
+            //end of test
             int userChoice = 0; //user choice of vendor to shop at
             /*calculate the distance between a buyer and all the seller.*/
             if(!sellerslist.isEmpty()) {
@@ -140,8 +153,8 @@ public class Shop {
                     double sellerLat = 0;
                     double sellerLon = 0;
                     sellerslist.get(i).getLocation().keySet(); //return the city seller is in
-                    for (List<Seller.Seller.Coordinates> t : sellerslist.get(i).getLocation().values()) {
-                        for (Seller.Seller.Coordinates x : t) {
+                    for (List<Seller.Coordinates> t : sellerslist.get(i).getLocation().values()) {
+                        for (Seller.Coordinates x : t) {
                             sellerLat = x.getLatitude();
                             sellerLon = x.getLongitude();
                         }
@@ -158,12 +171,38 @@ public class Shop {
                 }
 
             }
-            /*Then you should be position of in the sellerlist. You can use that to get into seller's stock*/
+            /*Then you should have the position of in the sellerlist. You can use that to get into seller's stock*/
             System.out.println("Welcome to "+sellerslist.get(userChoice).getName());
-            /*Pick Items,
-             call sellerslist's sell method to reduce the stock,
-            * add to cart if they are able to get the exact amount, else return out of stock
-            * */
+            double finalprice = 0;
+            int user_input1 = 1;
+            while (user_input1 == 1){
+
+                /*Pick Items,
+                 call sellerslist's sell method to reduce the stock,
+                * add to cart if they are able to get the exact amount, else return out of stock
+                * */
+                sellerslist.get(userChoice).printStock(); // print all the items that vendor has.
+                System.out.print("Enter the item number you wish to buy along with the amount. \n");
+                int userItemChoice = 1111; //the item user want to buy
+                int userItemAmount = 5;
+                sellerslist.get(userChoice).sell(userItemChoice,userItemAmount);
+                Item posOfItem = sellerslist.get(userChoice).getItem(userItemChoice); // to get description
+                user_input = 1;
+
+                buyer1.addToCart(new Item(userItemChoice, userItemAmount, posOfItem.getDescription(), posOfItem.getPrice()));
+                buyer1.viewCart();
+                finalprice += (sellerslist.get(userChoice).getItem(userItemChoice).getPrice() * userItemAmount);
+                System.out.println("Your total is $" + finalprice);
+                System.out.println("Would you like to add another item?");
+                user_input1 = 0;
+                //ask user for input?
+            }
+
+            //check out
+
+
+
+
         }
 
 
