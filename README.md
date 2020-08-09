@@ -13,5 +13,5 @@ To run what we have made: \\
 
 Video demonstration of app: https://youtu.be/HOWKhSJVi8k
 <p align="center">
-<img src="HAC-2020/COVIDBugs/appscreenshot.png" >
+<img src="appscreenshot.png">
 </p>
