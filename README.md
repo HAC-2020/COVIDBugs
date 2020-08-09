@@ -9,3 +9,9 @@ As long as people are willing to shop online for their essentials, this app will
 This app was coded entirely in Java, using JavaFX for frontend. 
 
 Video demonstration of app: https://youtu.be/HOWKhSJVi8k
+<p align="center">
+<img src="/Desktop/appscreenshot" >
+</p>
+<p align="center">
+  <img src="/Desktop/appscreenshot" width="350" title="hover text">
+</p>
